@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Stream - Connect the Donors</title>
+
+  <!-- favicon-->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #c5c7c9;
+      margin: 20px 0;
+    }
+      /* Define the column layout */
+  .column {
+    width: 33.33%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout */
+  @media screen and (max-width: 1024px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  /* Adjust font size for smaller screens */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:redstream001@gmail.com" class="contact-link">timeisit@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+917558951351" class="contact-link">+91-9304044989</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/andro.pool.54?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_vladimir_putin.___/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Annabel07785340" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtu.be/Af0gk_kiGac" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">TimeISIT</a>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Our Team</a>
+            </li>
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!--HERO-->
+  <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+  aria-label="hero">
+  <div class="container">
+    <div class="hero-content">
+      <img src="assets/images/time-icon.png" alt="ICON" width="70" height="70"> 
+      <p class="section-subtitle">Welcome TimeIsIt</p>
+      <h1 class="h1 hero-title">Connecting The Top Consultant.</h1>
+      <p class="hero-text">
+        Our mission is to bridge the gap between students and recipients, providing a seamless and efficient experience for both parties.
+        You can trust us,
+        we provide the best service...
+      </p>
+      <form class="hero-form">
+        <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+          class="email-field" id="email_response">
+        <button type="submit" class="btn" onclick="get_response()">Get Response Back</button>
+      </form>
+    </div>
+    <figure class="hero-banner">
+      <img src="./assets/images/home.png" width="587" height="839" alt="hero banner" class="w-100">
+    </figure>
+  </div>
+</section>
+    <!--HERO SECOND-->
+    <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            
+            <p class="hero-text">
+              <img src="./assets/images/about3.jpg" width="587" height="839" alt="hero banner" class="w-100">             
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <h1 class="h1 hero-title">Who We Are</h1>
+            <p style="font-size: larger;">An enthusiastic group of engineering students from Chandigarh University in Gharuan, Punjab, is responsible for the founding of TimeISIT. We joined forces with the same goal of addressing the urgent need for an expedited educational process so that we could apply our technological expertise and have a tiny positive impact on society.</p>
+          </figure>
+        </div>
+      </section>
+    <!--Hero THIRD-->
+    <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img src="assets/images/time-icon.png" alt="ICON" width="70" height="70"> 
+            <p class="section-subtitle">TIMEISIT</p>
+            <h1 class="h1 hero-title">Our Vision</h1>
+            <p class="hero-text">
+              Our goal at TimeISIT Company is to provide a single center that links students with those in need. In the future, we see finding the right individuals. Rather, it turns into a straightforward, effective, and easily available procedure that can save lives in emergency situations. Additionally, we made every effort to design a user-friendly layout for this website so that average consumers could access and utilize our services with ease.
+
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/about5.jpg" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+      <!--Hero THIRD-->
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            
+            <p class="hero-text">
+              <img src="./assets/images/about4.jpg" width="587" height="839" alt="hero banner" class="w-100">             
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <h1 class="h1 hero-title">How We Work</h1>
+            <p style="font-size: larger;">The procedure is simple: students register their information with us, giving us vital facts about their topic of study, contact information, and address. Through the development of an extensive database, we are able to promptly pair recipients looking for a suitable consultant with our staff.
+              <br><br>
+              They can enter their requirements on our user-friendly platform and search the consultant database for possible matches. The matching procedure is effective and made to quickly pair recipients with the right consultant.
+Additionally, we offer a straightforward response back tool where users can enter their email address and receive a direct response from us. Users have the option to reserve a time in advance, in which case a consultant will be assigned to you directly. 
+</p>
+          </figure>
+        </div>
+      </section>
+      <!--Hero FOURTH-->
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img src="assets/images/time-icon.png" alt="ICON" width="70" height="70"> 
+            <p class="section-subtitle">TIMEISIT</p>
+            <h1 class="h1 hero-title">24x7 Support and Service</h1>
+            <p class="hero-text">
+              We take great satisfaction in providing service, support, and assistance around-the-clock. Our staff is committed to answering any questions or concerns you may have and to offering timely assistance. Our first priorities are your satisfaction and well-being.
+              
+            </p>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/about2.jpg" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+        <hr style="margin-left: 3cm; margin-right: 3cm;">
+        
+        <div class="row" style="overflow: hidden; padding: 1cm;">
+          <!-- First Column -->
+          <div class="column">
+            <h1 style="color: var(--oxford-blue-1); font-size: var(--fs-1);">Join the TimeISIT Community</h1>
+            <br>
+            <p style="font-size: 17px;">
+              Joining our expanding TIMEISIT community is extended to you. Joining TIMEISIT allows you to support a worthy cause and make a significant impact on the field of education. Your altruistic act of knowledge sharing has the potential to have a big impact and give people in need hope.
+
+            </p>
+          </div>
+        
+          <!-- Second Column -->
+          <div class="column">
+            <h1 style="color: var(--oxford-blue-1); font-size: var(--fs-1);">Let's Create a Better Tomorrow</h1>
+            <br>
+            <p style="font-size: 17px;">
+              At TimeISIT, we genuinely think that amazing things can occur when people band together for a common goal. We can create a future where easy education is easily accessible to those who need it most with your help and involvement. Together, we can build a compassionate and caring community and build a better tomorrow.
+            </p>
+          </div>
+        
+          <!-- Third Column -->
+          <div class="column">
+            <h1 style="color: var(--oxford-blue-1); font-size: var(--fs-1);">Raise a fund if you can</h1>
+            <br>
+            <p style="font-size: 17px;">
+              We are a group of committed individuals providing services without the aim of profit. However, there are costs associated with operating and maintaining our services. At the moment, our team, along with a few generous sponsors, is responsible for funding these costs.  <a href="tel:+917231015392" class="footer-link" style="display: inline; color: #216aca;" onmouseover="this.style.color='#03d9ff'" onmouseout="this.style.color='#216aca'">+91-7231-015-392 to donate fund</a>.
+            </p>
+          </div>
+        </div>
+        
+      </section>
+
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">TimeISIT</a>
+          <p class="footer-text">
+            Our focus is bridging the gap in the education sector by putting students and beneficiaries in touch. Our goal is to establish a community that encourages compassion, togetherness, and support among those who are dedicated to changing the world.
+          </p>
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <span class="span">
+              24 X 7:<br>
+              365 Days
+            </span>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Find Consultant</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">About us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#team_section" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <a href="https://goo.gl/maps/BYA5MxQUg5B8ZFLcA">
+            <address class="item-text">
+              Chandigarh University,<br>
+              Mohali, Sahibzada Nagar, Chandigarh IN
+            </address>
+          </a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+917052101786" class="footer-link">+91-9304-044-989</a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:help@example.com" class="footer-link">timeisit@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 All Rights Reserved by TimeISIT
+        </p>
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/EduTechcon60630" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!--BACK TO TOP-->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--custom js link-->
+  <script src="./assets/js/script.js" defer></script>
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

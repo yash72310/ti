@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeISIT</title>
+
+  <!-- favicon-->
+  <link rel="shortcut icon" href="./assets/images/time-icon.png" type="image/svg+xml">
+
+  <!--css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("QNmsq3rhftvJpQBcQ");
+    })();
+  </script>
+  <style>
+  .popup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff, #a3d2ee);
+      color: #0e254e;
+      font-size: 16px;
+      z-index: 9999;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    </style>
+  <script>
+    function showPopup(message) {
+      const popup = document.createElement("div");
+      popup.className = "popup";
+      popup.textContent = message;
+      document.body.appendChild(popup);
+      setTimeout(function () {
+        popup.remove();
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body id="top">
+  <header class="header" id="home">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:redstream001@gmail.com" class="contact-link">timeisit@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+917558951351" class="contact-link">+91-9304044989</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/andro.pool.54?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_vladimir_putin.___/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Annabel07785340" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtu.be/Af0gk_kiGac" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">TimeISIT</a>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.php" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="#team_section" class="navbar-link" data-nav-link>Our Team</a>
+            </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!--HERO-->
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img src="assets/images/time-icon.png" alt="ICON" width="70" height="70"> 
+            <p class="section-subtitle">Welcome TimeIsIt</p>
+            <h1 class="h1 hero-title">Connecting The Top Consultant.</h1>
+            <p class="hero-text">
+              Our mission is to bridge the gap between students and recipients, providing a seamless and efficient experience for both parties.
+              You can trust us,
+              we provide the best service...
+            </p>
+            <form class="hero-form">
+              <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+                class="email-field" id="email_response">
+              <button type="submit" class="btn" onclick="get_response()">Get Response Back</button>
+            </form>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/home.png" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+
+      <!--SERVICE-->
+<section class="section service" id="service" aria-label="service">
+  <div class="container">
+    <p class="section-subtitle text-center">Get Touch with the Consultant</p>
+
+    <!-- Replace the existing content with your form -->
+    <form class="donor-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="blood-type">CLASS</label>
+        <select id="blood-type" name="class">
+          <option value="A+">I</option>
+          <option value="A-">II</option>
+          <option value="B+">III</option>
+          <option value="B-">IV</option>
+          <option value="AB+">V</option>
+          <option value="AB-">VI</option>
+          <option value="O+">VII</option>
+          <option value="O-">VIII</option>
+          <option value="O-">IX</option>
+          <option value="O-">X</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+
+      <button type="submit" class="btn" onclick="sendMail()">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+
+      <!--ABOUT-->
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+          <figure class="about-banner">
+            <img src="./assets/images/care.jpg" width="470" height="538" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+          <div class="about-content">
+            <p class="section-subtitle">About Us</p>
+            <h2 class="h2 section-title">We Care For Our Future Aspirants ꨄ︎</h2>
+            <p class="section-text section-text-1">
+              At TimeISIT, we are passionate about connecting students with our talented team members and bridging the gap in the Education industry.
+               Our mission is to provide a seamless and efficient experience for both students and recipients, ensuring timely access to life-saving transfusions.
+            </p>
+            <p class="section-text">
+              We strive to create a community that fosters empathy, support, and solidarity among individuals who are committed to making a difference.
+               Whether you're a potential donor or someone in need of blood, we are here to assist you every step of the way.
+            </p>
+            <a href="about.html" class="btn">Read more About Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!--services-->
+
+      <section class="section doctor" aria-label="doctor">
+        <div class="container">
+          <h2 class="h2 section-title text-center">Our other services</h2>
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-1.png" width="460" height="500" loading="lazy" alt="PREBOOK"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Pre Book Consultant</a>
+                </h3>
+                <p class="card-subtitle">Book Consultant For An upcoming Date</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/call.jpg" width="460" height="500" loading="lazy" alt="AMBULANCE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Call our Consultant</a>
+                </h3>
+                <p class="card-subtitle">Enjoy the call service</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-3.png" width="460" height="500" loading="lazy" alt="WHY DONATE ?"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Why TimeISIT ?</a>
+                </h3>
+                <p class="card-subtitle">Why trust in TimeISIT ?</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-4.png" width="460" height="500" loading="lazy" alt="CAN YOU DONATE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="canyoudonate.html" class="card-title">Can You give a chance?</a>
+                </h3>
+                <p class="card-subtitle">Check that can you give a time</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!--CTA-->
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+          <figure class="cta-banner">
+            <img src="./assets/images/consultant.jpg" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+          <div class="cta-content">
+            <p class="section-subtitle">Give TIME Directly To Us</p>
+            <h2 class="h2 section-title">We Are open And Welcoming our Future Aspirants</h2>
+            <a href="#service" class="btn">Book schedule</a>
+          </div>
+        </div>
+      </section>
+
+      <!--TEAM-->
+      <div class="team" id="team_section">
+        <h2>Our Teams</h2>
+
+        <section class="chef" id="chef_section">
+        
+            <div class="box-container">
+
+              <div class="box">
+                <img src="images/Gaurav.jpg" loading="lazy">
+                <p>A Mechanical Engineer turned Career Consultant, provides personalized guidance for educational careers. your trusted career consultant dedicated to helping students embark on successful career journeys.</p>
+                <div class="info">
+                <h5>Gourav Kumar Saw</h5>
+                <span>ENGINEER</span>
+      
+            </div>
+            </div>
+
+
+                <div class="box">
+                <img src="./images/Pritesh.png" loading="lazy">
+                <p>A Career Consultant who transitioned from the realm of Computer Science Engineering, now specializing in delivering personalized guidance to students for their educational and professional aspirations. </p>
+                <div class="info">
+                <h5>Pritesh Kumar</h5>
+                <span>ENGINEER</span>
+               
+            </div>
+        </div>
+
+        <div class="box">
+          <img src="images/Ravi.jpg" loading="lazy">
+          <p>A Career Consultant with a background in Engineering Physics Students, offering tailored advice and support to guide students in achieving their educational and career aspirations. Your dependable career advisor committed to helping individuals set out on prosperous career paths.</p>
+          <div class="info">
+          <h5>Ravi Rajak</h5>
+          <span>ENGINEER</span>
+      
+      </div>
+      </div>
+        
+
+
+        
+
+<div class="box">
+            <img src="images/Ayaz.jpg" loading="lazy">
+            <p>Engineer who has shifted their career to become a dedicated Career Consultant, offering tailored advice to students as they navigate their educational and professional journeys. Your trusted mentor committed to helping individuals shape prosperous and rewarding career paths.</p>
+            <div class="info">
+            <h5>Ayaz Mirza</h5>
+            <span>CS</span>
+          
+        </div>
+        </div>
+
+        <div class="box">
+            <img src="images/yash.png" loading="lazy">
+            <p>A former Engineer who has shifted their career to become a dedicated Career Consultant, offering tailored advice to students as they navigate their educational and professional journeys. Your trusted mentor committed to helping individuals shape prosperous and rewarding career paths.</p>
+            <div class="info">
+            <h5>Yash Jhalani</h5>
+            <span>ENGINEER</span>
+          
+        </div>
+        </div>
+
+        <div class="box">
+          <img src="images/Nilesh.jpg" loading="lazy">
+          <p>A Career Consultant who transitioned from the field of Engineering, now specializing in delivering personalized guidance to students for their educational and professional pursuits. Your reliable career advisor devoted to aiding individuals in crafting successful career journeys.</p>
+          <div class="info">
+          <h5>Nilesh Kumar</h5>
+          <span>B.COM</span>
+
+      </div>
+      </div>
+
+        </div>
+        </section>
+
+        <button id="loadMore">Load More</button>
+    </div>
+    </article>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">TimeISIT</a>
+          <p class="footer-text">
+            Our focus is bridging the gap in the education sector by putting students and beneficiaries in touch. Our goal is to establish a community that encourages compassion, togetherness, and support among those who are dedicated to changing the world.
+          </p>
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <span class="span">
+              24 X 7:<br>
+              365 Days
+            </span>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Find Consultant</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">About us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#team_section" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Contact</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <a href="https://goo.gl/maps/BYA5MxQUg5B8ZFLcA">
+            <address class="item-text">
+              Chandigarh University,<br>
+              Mohali, Sahibzada Nagar, Chandigarh IN
+            </address>
+          </a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+917052101786" class="footer-link">+91-9304-044-989</a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:help@example.com" class="footer-link">timeisit@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 All Rights Reserved by TimeISIT
+        </p>
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/EduTechcon60630" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!--BACK TO TOP-->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--custom js link-->
+  <script src="./assets/js/script.js" defer></script>
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>
